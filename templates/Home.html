@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/bootstrap/css/bootstrap.min.css' %}">
+    <title>Title</title>
+</head>
+<body>
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="/">主页</a></li>
+  <li role="presentation" ><a href="/model">训练</a></li>
+  <li role="presentation"><a href="/info">结果展示</a></li>
+</ul>
+
+<script src="{% static 'jquery/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

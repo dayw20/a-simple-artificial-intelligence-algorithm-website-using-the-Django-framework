@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/bootstrap/css/bootstrap.min.css' %}">
+    <title>Title</title>
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li role="presentation"><a href="/">主页</a></li>
+    <li role="presentation" class="active"><a href="/model">训练</a></li>
+    <li role="presentation"><a href="/info">结果展示</a></li>
+</ul>
+<div class="col-lg-3"></div>
+<div class="panel-group col-md-5" id="accordion" role="tablist" aria-multiselectable="true" style="margin-top: 100px">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                   aria-expanded="true" aria-controls="collapseOne">
+                    训练信息
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <p>模型结构: Lenet</p>
+                <p>优化器: Adam</p>
+                <p>学习率: 0.001</p>
+                <p>批次大小: 256</p>
+                <p>训练总轮次: 10</p>
+            </div>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>发起人</label>
+                <input type="text" class="form-control" placeholder="发起人" name="user_name">
+            </div>
+            <div class="form-group">
+                <label>任务名称</label>
+                <input type="text" class="form-control" placeholder="任务名称" name="task_name">
+            </div>
+            <div class="col-md-5"></div>
+            <div>
+                <button type="submit" class="btn btn-success">提交</button>
+                <a href="/model" class="btn btn-danger">重置</a>
+            </div>
+
+        </form>
+    </div>
+    <script src="{% static 'jquery/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
