@@ -44,8 +44,8 @@ a-simple-artificial-intelligence-algorithm-website-using-the-Django-framework/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/a-simple-artificial-intelligence-algorithm-website-using-the-Django-framework.git
-   cd a-simple-artificial-intelligence-algorithm-website-using-the-Django-framework
+   git clone https://github.com/dayw20/LeNet_Demo_WebApplication.git
+   cd LeNet_Demo_WebApplication
    ```
 
 2. **Create virtual environment**
@@ -53,12 +53,19 @@ a-simple-artificial-intelligence-algorithm-website-using-the-Django-framework/
    python -m venv venv
    source venv/bin/activate  # Linux/Mac
    # or
-   venv\Scripts\activate     # Windows
+   venv\Scripts\activate.bat # Windows
    ```
 
 3. **Install dependencies**
    ```bash
    pip install -r requirements.txt
+   ```
+
+4. **Download model weights**
+   ```bash
+   # 从Releases下载模型权重文件
+   wget https://github.com/dayw20/LeNet_Demo_WebApplication/releases/latest/download/lenet.pth
+   # 或者手动下载并放置在项目根目录
    ```
 
 4. **Run Django server**
@@ -68,6 +75,10 @@ a-simple-artificial-intelligence-algorithm-website-using-the-Django-framework/
 
 5. **Access the website**
    Open your browser and visit `http://127.0.0.1:8000/`
+
+## Model Weights
+
+The pre-trained model weights (`lenet.pth`) are not included in the repository due to size constraints. Please refer to [MODEL_DOWNLOAD.md](MODEL_DOWNLOAD.md) for download instructions.
 
 
 ## Website Features
